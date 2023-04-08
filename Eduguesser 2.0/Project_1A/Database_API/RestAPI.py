@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from Project_1A.Database_API import CRUD
+import CRUD
 from geopy.geocoders import Nominatim
 
 app = Flask(__name__)
