@@ -1,0 +1,14 @@
+/* css settings for <h1> tag*/
+h1 {
+    margin: 50px;
+    text-align: center;
+}
+/* Size, Center alignment for div id 'map' */
+.map-wrapper {
+  position: relative;
+}
+#map {
+    height: 500px;
+    width: 90%;
+    margin: auto
+}

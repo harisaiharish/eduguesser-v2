@@ -1,0 +1,14 @@
+#map {
+    height: 300px;
+    width: 300px;
+    top: 50%;
+}
+
+.container {
+    display : grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+#info {
+    margin: auto
+}
