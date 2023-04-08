@@ -1,0 +1,51 @@
+
+{% extends "base.html" %}
+{% block content %}
+<head>
+    <!-- Required Meta tags -->
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduGuesser</title>
+    <style>
+        body{
+        background-color: lightblue;}
+        </style>
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- css link for this html, and for the leaflet map-->
+    <link rel="stylesheet" type="text/css" href = "../static/css/map.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+
+    <!-- src link for leaflet javascript -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+
+    <!-- src link for jQuery ajax javascript Functionality -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+
+
+    <h1>Guess The Country On the Map!</h1>
+
+    <!-- creating 'map' div object -->
+    <div class = map-wrapper>
+        <div id="map"></div>
+    </div>
+
+    <!-- Linking to local js file -->
+    <script src ="../static/js/map.js"></script>
+
+    <!-- flash messages -->
+    {% for mesg in get_flashed_messages() %}
+      <div class="alert alert-danger">{{ mesg }}</div>
+    {% endfor %}
+</body>
+{% endblock %}

@@ -1,0 +1,109 @@
+
+{% extends "base.html" %}
+{% block content %}
+    <head>
+        <!-- Required Meta tags -->
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- css link for this html, and for the leaflet map-->
+        <link rel="stylesheet" type="text/css" href = "../static/css/guessedpage.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+         integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+         crossorigin=""/>
+
+        <!-- src link for leaflet javascript -->
+        <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+         integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+         crossorigin=""></script>
+
+        <script src ="../static/js/guessedpage.js"></script>
+
+        <title>EduGuesser</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<style>
+    body {
+    background-color: antiquewhite;
+}
+    .button {
+  background-color: #98c6d6;
+  border: none;
+  color: black;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+    p{
+        padding: 20px;
+    }
+     h1{
+        padding: 20px;
+    }
+</style>
+        <body>
+        <style>
+
+
+         h1 {
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 60px;
+        }
+
+        p{
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 28px;
+        }
+         </style>
+        <div class = 'container'>
+            <div class = 'info'>
+                {% if Correct %}
+                <br>
+<br>
+<br>
+                    <h1><strong>Spot On! You Got it Right!</strong></h1>
+                {% else %}
+                       <br>
+                <br>
+                    <h1>
+
+                        Nice Try, the Correct Country was: {{ cCountry }} <br>
+                        </h1>
+                <p>You guessed: {{ gCountry }}</p>
+
+
+
+                {% endif %}
+                <br>
+                <p>
+                    <br>
+                    <strong>
+                    You Gained {{ Score }} Score from this Round </strong>
+                </p>
+            </div>
+            <!-- creating 'map' div object -->
+            <div id="map"></div>
+
+            <!-- Linking to local js file -->
+            <script>
+                var coord1 = JSON.parse('{{ glatlng | tojson | safe}}');
+                var coord2 = JSON.parse('{{ clatlng | tojson | safe}}');
+            </script>
+            <script src ="../static/js/guessedpage.js"></script>
+        </div>
+        &nbsp;&nbsp;
+        <button id = "New Location" class="button">Next Location</button>
+        <script>
+            document.getElementById("New Location").addEventListener("click", function() {
+                window.location.href = window.location.origin + "/new"
+            });
+        </script>
+    </body>
+{% endblock %}
