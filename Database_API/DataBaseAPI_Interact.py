@@ -10,8 +10,8 @@ Location1 = {'imagePath': 'static/images/11.png',
              'info5': 'The famous writer Rick Riordan seems to know a lot about its mythology',
              'CountryName': 'Greece'}
 
-#response = requests.post(api_endpoint, json=Location1)
-#print(response)
+response = requests.post(api_endpoint, json=Location1)
+print(response)
 
 #response = requests.get(f'{api_endpoint}/ids')
 #print(response.json())
