@@ -1,11 +1,14 @@
-import os
 import sqlite3
+from pathlib import Path
 
-print(__file__)
+#print(__file__)
 
-conn = sqlite3.connect('database.db')
+db = Path(__file__).with_name("database.db") #Fixes Issue with Relative Paths on different systems
+sql = Path(__file__).with_name("schema.sql")
 
-with open('Database_API/schema.sql') as f:
+conn = sqlite3.connect(db)
+
+with open(sql) as f:
     conn.executescript(f.read())
 
 conn.commit()

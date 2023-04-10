@@ -1,9 +1,10 @@
 import sqlite3
+from pathlib import Path
 
-
+db = Path(__file__).with_name("database.db")
 # get connection to the database
 def get_dbConn():
-    conn = sqlite3.connect('database.db')
+    conn = sqlite3.connect(db)
     return conn
 
 
