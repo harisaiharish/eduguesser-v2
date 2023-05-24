@@ -1,7 +1,8 @@
 import sqlite3
 from pathlib import Path
 
-db = Path(__file__).with_name("database.db")
+db = Path(__file__).with_name("database.db") #Fixes Issue with Relative Paths on different systems
+
 # get connection to the database
 def get_dbConn():
     conn = sqlite3.connect(db)
