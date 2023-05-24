@@ -75,3 +75,21 @@ diff colour for image desc, facts and hints        - Hari
 remove lat and long on guessed page- done
 
 last screen fixed
+
+------------------------------------------------------------------------------------------------------
+EDUGUESSER - 2.0
+------------------------------------------------------------------------------------------------------
+
+LEARN TO USE GITHUB DUMBASS
+
+things to do:
+Multipllayer -Hari
+make the website Public-idk
+add more locations - grunt work(not aniketh)
+revamp info display, guessing and results screen system using hidding divs - aniketh
+do Nothing - Tarun
+user accounts? Statistical tracking?
+
+Add UI
+
+
