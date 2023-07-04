@@ -1,95 +1,20 @@
+All relevant information and logic solving must be done in javascript
+Webapp must be changed so that multiple instances can run
+All 3 game web pages should now be in 1, with div visibility
+
+
 TODO
 
-Design obv -CSS/HTML maybe bootstrap for easier
+New path to be taken:
+when play button is clicked, go to /play
 
-1. Getting A random Location ( SQL/Python/FLask )                              --- Tarun
-CRUD function to return a random record
-RestAPI function for returning random record
-App route in WebApp to receive and display the random image
+javascript of /play - First initialise all the variables, and a list of locations used
+for loop of length of rounds, in which we cycle through each of the three stages - 
+showing information - then showing guessing - then showing result
 
-2. Access to random Locations ( HTML/Flask)                                    --- Kriti
-Implement transitions from random Loco nation text Location
-Add locations and their images
+Final result/congratulations will happen after that for loop finishes - 
+hide the rest of the divs and show the congrats - try and see if the confetti works
 
-3) Spitting facts ( SQL/HTML/Flask )                                           --- Hari
-Displaying 3 facts matching the location from database
-Button to move to guessing
-Button to display 2 more facts as hints
-
-4. Proper display ( HTML/CSS )                                                 --- Shivani
-Display the facts along with the image in a way that doesn't look terrible
-
-5. Implement Guessing ( lots of research )                                     --- Aniketh
-Display interactable Map of earth
-take input from clicks on map
-getting score from the guess and actual answer
-
-
-
-
-
-
-Next set of TODOs
-1) Making sure next location can't be an already covered location       -
-2) Scoring based off of closeness of guess                              - Tarun
-3) Scoring lowered based on whether they clicked hints                  -
-4) Aniketh more map stuff he knows what he's doing
-5) Add fields to db latitude longitude, Name                             -- shivani
-6) Make Global dictionary Value of Map Country Names to Regular Names
-
-
-
-Next set of TODOs 1/02/23
-
-1) Popup when place is clicked showing Correct or Distance away from point + Increase in score
-If not right, line drawn on map showing distance from right place
-2) Top left/right score always displayed
-3) Change 3 facts 2 hints to 1 description 2 facts 1 hint
-4)REVAMP NAMES - /map to /guess, /congratulations to /gameover
-DONE 5) Store coords in database after inputting country
-DONE 6) Prevent /new from going to the same locations
-DONE 1) Limit to 10 games and redirect to a Congratulations page displaying final score
-DONE At Play Button, redirect to function which resets roundNum to 0, increase roundNum when /new is called
-DONE MAP: Make Map start in proper location
-DONE /zoom Display Line between Guess and Location
-DONE set max nad min zoom, as well as max Bounds DONE
-
-
-UI
-
-1) If water, print ocean instead of throwing error --- DONE
-
-
-1) UI UX for guessed page - on spot! or Nice try                 ---idk anyone can do
-2) Sound effects for guessing                                    ---Hari
-3) Center aligning congrats page with sound effects
-
-#MAKE FLOWCHART
-
-
-LAST TODO
-change description and colour of font on first page - Tarun
-start weird button - done
-aligning picture - dont cut off
-diff colour for image desc, facts and hints        - Hari
-remove lat and long on guessed page- done
-
-last screen fixed
-
-------------------------------------------------------------------------------------------------------
-EDUGUESSER - 2.0
-------------------------------------------------------------------------------------------------------
-
-LEARN TO USE GITHUB DUMBASS
-
-things to do:
-Multipllayer -Hari
-make the website Public-idk
-add more locations - grunt work(not aniketh)
-revamp info display, guessing and results screen system using hidding divs - aniketh
-do Nothing - Tarun
-user accounts? Statistical tracking?
-
-Add UI
-
+The javascript can send an ajax call to a online database running,  which can store player data
+if accounts are made
 
