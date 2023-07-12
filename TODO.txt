@@ -16,5 +16,5 @@ Final result/congratulations will happen after that for loop finishes -
 hide the rest of the divs and show the congrats - try and see if the confetti works
 
 The javascript can send an ajax call to a online database running,  which can store player data
-if accounts are made
+if accounts are made.
 

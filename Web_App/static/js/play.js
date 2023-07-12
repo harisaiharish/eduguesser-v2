@@ -4,3 +4,5 @@
 var guessedCountry;
 var correctCountry;
 
+//Will need to copy all js here, or at least understand how linking multiple js works
+// Because the seperate js files need to send stuff to each other
