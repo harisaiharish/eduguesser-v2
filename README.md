@@ -1,2 +1,0 @@
-# eduguesser-v2
-An educational guessing game designed to engage and entertain a young audience while enhancing their general knowledge. The game focuses users leveraging anthropological, historical, geographical, and political facts about various nations, to then pinpoint them on an interactive world map. Points are awarded based on number of facts used and accuracy of guesses, prompting a competitive environment to foster maximum transfer of knowledge.
